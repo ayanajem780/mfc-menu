@@ -730,6 +730,17 @@ button {
   gap: 8px;
 }
 
+/* Text-only cards (no product photo) — used where the source image is too
+   low quality to show; keep the same card shell, just give the body its
+   own top spacing since there's no media block above it. */
+.card--no-image .card__body {
+  padding: 26px 22px 24px;
+}
+
+.card--no-image .card__name {
+  font-size: 27px;
+}
+
 .card__name {
   font-family: var(--font-display);
   font-size: 25px;

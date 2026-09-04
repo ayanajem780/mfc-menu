@@ -127,21 +127,25 @@
 
   /* ------------------------------ card builder ------------------------------ */
 
-  function buildCard(product) {
-    const card = el('article', 'card reveal' + (product.needsReview ? ' needs-review' : ''));
+  function buildCard(product, opts) {
+    opts = opts || {};
+    const noImage = !!opts.noImage;
+    const card = el('article', 'card reveal' + (product.needsReview ? ' needs-review' : '') + (noImage ? ' card--no-image' : ''));
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', product.name);
 
-    const media = el('div', 'card__media');
-    const img = el('img');
-    img.src = product.image;
-    img.alt = product.name;
-    img.loading = 'lazy';
-    media.appendChild(img);
-    if (product.badge) media.appendChild(el('span', 'card__badge', escapeHtml(product.badge)));
-    if (product.people) media.appendChild(el('span', 'card__people', escapeHtml(product.people)));
-    card.appendChild(media);
+    if (!noImage) {
+      const media = el('div', 'card__media');
+      const img = el('img');
+      img.src = product.image;
+      img.alt = product.name;
+      img.loading = 'lazy';
+      media.appendChild(img);
+      if (product.badge) media.appendChild(el('span', 'card__badge', escapeHtml(product.badge)));
+      if (product.people) media.appendChild(el('span', 'card__people', escapeHtml(product.people)));
+      card.appendChild(media);
+    }
 
     const body = el('div', 'card__body');
     body.appendChild(el('h3', 'card__name', escapeHtml(product.name)));
@@ -299,14 +303,11 @@
       section.appendChild(stage);
     }
 
-    const trioIds = ['cadeau', 'regime', 'complet'];
-    const gridProducts = isTwisterBurgers
-      ? products.filter((p) => !trioIds.includes(p.id))
-      : products;
-
-    const grid = el('div', 'grid');
-    gridProducts.forEach((p) => grid.appendChild(buildCard(p)));
-    section.appendChild(grid);
+    if (!isTwisterBurgers) {
+      const grid = el('div', 'grid');
+      products.forEach((p) => grid.appendChild(buildCard(p)));
+      section.appendChild(grid);
+    }
 
     return section;
   }
