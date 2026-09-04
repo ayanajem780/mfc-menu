@@ -1125,10 +1125,14 @@ button {
 }
 
 .site-footer .fmark {
-  font-family: var(--font-display);
-  font-size: 18px;
-  color: var(--ink-dim);
-  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+}
+
+.site-footer .fmark img {
+  height: 26px;
+  width: auto;
+  display: block;
 }
 
 /* ---------------------------------- MISC ---------------------------------- */
