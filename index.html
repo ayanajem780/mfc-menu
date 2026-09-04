@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>MFC — Menu</title>
+<meta name="description" content="MFC — Menu digital premium. Twister & Burgers, Box, Big Box, Sides." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================== TOP BAR ============================== -->
+  <header class="topbar">
+    <div class="topbar__mark"><span class="dot"></span>MFC</div>
+    <a class="topbar__phone" href="tel:0528236023">Order · 0528-236023</a>
+  </header>
+
+  <!-- ================================ HERO ================================ -->
+  <section class="hero" id="hero">
+    <div class="hero__media" id="heroMedia">
+      <video
+        class="hero__video"
+        id="heroVideo"
+        poster="images/hero/hero-poster.jpg"
+        muted
+        loop
+        playsinline
+        autoplay
+        preload="auto"
+      >
+        <source src="videos/hero.webm" type="video/webm" />
+        <source src="videos/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero__scrim"></div>
+    <div class="hero__grain"></div>
+
+    <p class="hero__eyebrow eyebrow">MFC Digital Menu</p>
+    <h1 class="hero__title">MENU</h1>
+    <p class="hero__subtitle">Made to crave.</p>
+
+    <div class="hero__scroll"><i></i>Scroll</div>
+  </section>
+
+  <!-- ============================ CATEGORY NAV ============================ -->
+  <nav class="catnav-wrap">
+    <div class="catnav" id="catNav"></div>
+  </nav>
+
+  <!-- ============================ CATEGORY SECTIONS ============================ -->
+  <main id="categories"></main>
+
+  <!-- ================================ CTA ================================ -->
+  <section class="cta">
+    <div class="cta__glow"></div>
+    <p class="eyebrow cta__eyebrow">Craving already?</p>
+    <h2 class="cta__title">ORDER NOW</h2>
+    <p class="cta__sub">Composez le numéro et votre commande MFC est en route — chicken croustillant, box généreuses et sides gourmands.</p>
+    <a class="btn-order" href="tel:0528236023">
+      <span>Appeler · 0528-236023</span>
+    </a>
+  </section>
+
+  <!-- =============================== FOOTER =============================== -->
+  <footer class="site-footer">
+    <span class="fmark">MFC</span>
+    <span>Menu digital — informations produits reprises du menu officiel MFC.</span>
+  </footer>
+
+  <!-- =============================== MODAL =============================== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__media">
+        <button class="modal__close" id="modalClose" aria-label="Fermer">&times;</button>
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal__body">
+        <p class="modal__eyebrow" id="modalCategory"></p>
+        <h3 class="modal__title" id="modalTitle"></h3>
+        <p class="modal__desc" id="modalDesc"></p>
+        <ul class="modal__ingredients" id="modalIngredients"></ul>
+        <div class="modal__options" id="modalOptions"></div>
+        <div class="modal__footer">
+          <div class="modal__price" id="modalPrice"></div>
+          <a class="btn-order" id="modalOrderBtn" href="tel:0528236023">
+            <span>Order Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
