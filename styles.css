@@ -117,18 +117,12 @@ button {
 .topbar__mark {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 22px;
-  letter-spacing: 0.08em;
 }
 
-.topbar__mark span.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--red-bright);
-  box-shadow: 0 0 14px 2px rgba(255, 39, 67, 0.7);
+.topbar__mark img {
+  height: clamp(28px, 3.4vw, 36px);
+  width: auto;
+  display: block;
 }
 
 .topbar__phone {
