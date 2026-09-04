@@ -280,15 +280,17 @@ button {
   position: relative;
   z-index: 3;
   margin-bottom: 22px;
+  color: #ffffff;
 }
 
 .hero__title {
   position: relative;
   z-index: 3;
-  font-family: var(--font-display);
+  font-family: 'Baloo 2', var(--font-display);
+  font-weight: 800;
   font-size: clamp(72px, 16vw, 190px);
   line-height: 0.86;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   margin: 0;
   background: linear-gradient(180deg, #ffffff 0%, #f6f1e6 42%, #c9c2b3 100%);
   -webkit-background-clip: text;
@@ -1059,18 +1061,23 @@ button {
   padding: clamp(90px, 12vw, 160px) 0;
   text-align: center;
   overflow: hidden;
+  background-image: url('images/cta/cta-bg.jpg');
+  background-size: cover;
+  background-position: center 48%;
 }
 
 .cta__glow {
   position: absolute;
   inset: 0;
-  background: radial-gradient(50% 60% at 50% 40%, rgba(235, 25, 34, 0.2), transparent 72%);
+  background:
+    linear-gradient(180deg, rgba(10, 4, 3, 0.5) 0%, rgba(10, 4, 3, 0.12) 30%, rgba(10, 4, 3, 0.15) 65%, rgba(10, 4, 3, 0.45) 100%);
   pointer-events: none;
 }
 
 .cta__eyebrow {
   position: relative;
   z-index: 2;
+  color: #ffffff;
 }
 
 .cta__title {
@@ -1080,15 +1087,18 @@ button {
   font-size: clamp(44px, 8vw, 92px);
   line-height: 0.96;
   margin: 18px 0 22px;
+  color: #ffffff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .cta__sub {
   position: relative;
   z-index: 2;
-  color: var(--ink-dim);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 15px;
   max-width: 48ch;
   margin: 0 auto 34px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .cta .btn-order {
@@ -1096,6 +1106,7 @@ button {
   z-index: 2;
   padding: 18px 34px;
   font-size: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 /* ---------------------------------- FOOTER ---------------------------------- */
