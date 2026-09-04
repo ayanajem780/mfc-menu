@@ -249,9 +249,10 @@
     section.appendChild(el('div', 'category__glow'));
 
     const head = el('div', 'category__head reveal');
-    if (cat.id === 'twister-burgers') {
-      /* Twister & Burgers only: the "MFC · 01" eyebrow is replaced with a
-         slowly spinning 3D logo disc (pure CSS 3D, no library needed). */
+    if (cat.id === 'twister-burgers' || cat.id === 'box' || cat.id === 'big-box') {
+      /* Twister & Burgers, Box and Big Box: the "MFC · 0X" eyebrow is
+         replaced with a slowly spinning 3D logo disc (pure CSS 3D, no
+         library needed). */
       const logo3dWrap = el('div', 'logo3d-wrap');
       logo3dWrap.setAttribute('aria-hidden', 'true');
       const logo3d = el('div', 'logo3d');
@@ -272,12 +273,12 @@
     } else {
       head.appendChild(el('p', 'eyebrow', 'MFC · ' + (cat.id === 'box' ? '02' : cat.id === 'big-box' ? '03' : '04')));
     }
-    if (cat.id === 'twister-burgers') {
-      /* Twister & Burgers only: a fun, bold display font + a sauce-splash
-         graphic floating beside the title. */
+    if (cat.id === 'twister-burgers' || cat.id === 'box' || cat.id === 'big-box') {
+      /* Twister & Burgers, Box and Big Box: a fun, bold display font + a
+         sauce-splash graphic floating beside the title. */
       const titleWrap = el('div', 'category__title-wrap');
       titleWrap.appendChild(el('h2', 'category__title category__title--fun', escapeHtml(cat.label)));
-      const sauce = el('img', 'category__title-sauce');
+      const sauce = el('img', 'category__title-sauce' + (cat.id === 'box' || cat.id === 'big-box' ? ' category__title-sauce--side' : ''));
       sauce.src = 'images/deco/sauce-splash.png';
       sauce.alt = '';
       sauce.loading = 'lazy';
@@ -307,7 +308,7 @@
         trioGrid.appendChild(buildTrioCard(p));
       });
       section.appendChild(trioGrid);
-    } else {
+    } else if (cat.id !== 'box' && cat.id !== 'big-box') {
       const stage = el('div', 'category__stage reveal');
       const stagePicks = products.slice(0, 4);
       const slots = ['fi-a', 'fi-b', 'fi-c', 'fi-d'];
@@ -330,15 +331,7 @@
     } else {
       /* Only the products with clean, high-quality photos are shown here;
          the rest stay off this page until better photos are available. */
-      const photoGridIds = [
-        'le-crunchy',
-        'mfc-wrap',
-        'le-crispy',
-        'rapide',
-        'le-chef',
-        'croustillant',
-        'le-partager',
-      ];
+      const photoGridIds = ['le-crunchy', 'mfc-wrap', 'le-crispy'];
       const photoGridProducts = photoGridIds
         .map((id) => products.find((p) => p.id === id))
         .filter(Boolean);

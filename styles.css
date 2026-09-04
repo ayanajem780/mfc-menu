@@ -482,8 +482,35 @@ button {
   }
 }
 
+/* Box: title is short ("Box"), so the sauce sits beside it at mid-height
+   instead of below (which would crowd the tagline underneath). */
+.category__title-sauce--side {
+  top: 42%;
+  left: 100%;
+  transform: translate(6px, -50%) rotate(-8deg);
+  animation: sauce-wiggle-side 5s ease-in-out infinite;
+}
+
+@keyframes sauce-wiggle-side {
+  0%, 100% { transform: translate(6px, -50%) rotate(-8deg); }
+  50% { transform: translate(10px, -58%) rotate(-2deg); }
+}
+
+@media (max-width: 700px) {
+  .category__title-sauce--side {
+    top: 100%;
+    left: auto;
+    right: -4%;
+    transform: translateY(-10%) rotate(-8deg);
+    animation: sauce-wiggle 5s ease-in-out infinite;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .category__title-sauce { animation: none; }
+  .category__title-sauce,
+  .category__title-sauce--side {
+    animation: none;
+  }
 }
 
 .category__tagline {

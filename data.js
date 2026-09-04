@@ -141,9 +141,11 @@ const MFC_PRODUCTS = [
     image: 'images/menu/twister-burgers/wrap.jpg',
     badge: null,
   },
+
+  /* ------------------------------- BOX ---------------------------- */
   {
     id: 'rapide',
-    category: 'twister-burgers',
+    category: 'box',
     name: 'Rapide',
     description: null,
     ingredients: null,
@@ -159,7 +161,7 @@ const MFC_PRODUCTS = [
   },
   {
     id: 'le-chef',
-    category: 'twister-burgers',
+    category: 'box',
     name: 'Le Chef',
     description: null,
     ingredients: null,
@@ -175,7 +177,7 @@ const MFC_PRODUCTS = [
   },
   {
     id: 'croustillant',
-    category: 'twister-burgers',
+    category: 'box',
     name: 'Croustillant',
     description: null,
     ingredients: null,
@@ -191,7 +193,7 @@ const MFC_PRODUCTS = [
   },
   {
     id: 'le-partager',
-    category: 'twister-burgers',
+    category: 'box',
     name: 'Le Partager',
     description: null,
     ingredients: null,
@@ -206,10 +208,10 @@ const MFC_PRODUCTS = [
     badge: null,
   },
 
-  /* ------------------------------- BOX ---------------------------- */
+  /* ----------------------------- BIG BOX --------------------------- */
   {
     id: 'duo',
-    category: 'box',
+    category: 'big-box',
     name: 'Duo',
     description: null,
     ingredients: ['8 Pièces chicken', '2 Frites', '4 Buns', '2 Riz Chili', '1L Boisson'],
@@ -217,24 +219,9 @@ const MFC_PRODUCTS = [
     priceLabel: '150 DH',
     options: null,
     people: '2 Personnes',
-    image: 'images/menu/box/family-bucket.jpg',
+    image: 'images/menu/big-box/family-bucket-large.jpg',
     badge: null,
   },
-  {
-    id: 'fidelity',
-    category: 'box',
-    name: 'Fidelity',
-    description: null,
-    ingredients: ['10 Pièces chicken', '3 Frites', '6 Buns', '3 Riz Chili', '1L Boisson'],
-    price: 200,
-    priceLabel: '200 DH',
-    options: null,
-    people: '3 Personnes',
-    image: 'images/menu/box/family-bucket.jpg',
-    badge: null,
-  },
-
-  /* ----------------------------- BIG BOX --------------------------- */
   {
     id: 'ensemble',
     category: 'big-box',
@@ -245,6 +232,19 @@ const MFC_PRODUCTS = [
     priceLabel: '280 DH',
     options: null,
     people: '4 Personnes',
+    image: 'images/menu/big-box/family-bucket-large.jpg',
+    badge: null,
+  },
+  {
+    id: 'fidelity',
+    category: 'big-box',
+    name: 'Fidelity',
+    description: null,
+    ingredients: ['10 Pièces chicken', '3 Frites', '6 Buns', '3 Riz Chili', '1L Boisson'],
+    price: 200,
+    priceLabel: '200 DH',
+    options: null,
+    people: '3 Personnes',
     image: 'images/menu/big-box/family-bucket-large.jpg',
     badge: null,
   },
