@@ -307,6 +307,18 @@
       const grid = el('div', 'grid');
       products.forEach((p) => grid.appendChild(buildCard(p)));
       section.appendChild(grid);
+    } else {
+      /* Only the products with clean, high-quality photos are shown here;
+         the rest stay off this page until better photos are available. */
+      const photoGridIds = ['le-crunchy', 'mfc-wrap', 'le-crispy'];
+      const photoGridProducts = photoGridIds
+        .map((id) => products.find((p) => p.id === id))
+        .filter(Boolean);
+      if (photoGridProducts.length) {
+        const grid = el('div', 'grid');
+        photoGridProducts.forEach((p) => grid.appendChild(buildCard(p)));
+        section.appendChild(grid);
+      }
     }
 
     return section;
