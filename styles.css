@@ -469,6 +469,35 @@ button {
   line-height: 1.55;
 }
 
+.trio-card__prices {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trio-card__price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.trio-card__price-name {
+  color: var(--ink-dim);
+  letter-spacing: 0.02em;
+}
+
+.trio-card__price-val {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
 @keyframes floaty {
   0%, 100% { transform: translateY(0) rotate(-1.2deg); }
   50% { transform: translateY(-16px) rotate(1.2deg); }

@@ -234,6 +234,16 @@
         if (p.description) {
           body.appendChild(el('p', 'trio-card__desc', escapeHtml(p.description)));
         }
+        if (p.options && p.options.length) {
+          const prices = el('div', 'trio-card__prices');
+          p.options.forEach((o) => {
+            const row = el('span', 'trio-card__price-row');
+            row.appendChild(el('span', 'trio-card__price-name', escapeHtml(o.name)));
+            row.appendChild(el('span', 'trio-card__price-val', o.price != null ? o.price + ' DH' : '—'));
+            prices.appendChild(row);
+          });
+          body.appendChild(prices);
+        }
         card.appendChild(body);
         trioGrid.appendChild(card);
       });
