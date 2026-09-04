@@ -179,16 +179,15 @@ const MFC_PRODUCTS = [
     name: 'Croustillant',
     description: null,
     ingredients: null,
-    price: null,
-    priceLabel: 'Prix à confirmer',
+    price: 40,
+    priceLabel: '40 DH',
     options: [
-      { name: 'Seul', price: null },
-      { name: 'Menu', price: null },
+      { name: 'Seul', price: 40 },
+      { name: 'Menu', price: 55 },
     ],
     people: null,
     image: 'images/menu/twister-burgers/croustillant.jpg',
     badge: null,
-    needsReview: true,
   },
   {
     id: 'le-partager',
@@ -196,16 +195,15 @@ const MFC_PRODUCTS = [
     name: 'Le Partager',
     description: null,
     ingredients: null,
-    price: null,
-    priceLabel: 'Prix à confirmer',
+    price: 60,
+    priceLabel: '60 DH',
     options: [
-      { name: 'Seul', price: null },
-      { name: 'Menu', price: null },
+      { name: 'Seul', price: 60 },
+      { name: 'Menu', price: 70 },
     ],
     people: null,
     image: 'images/menu/twister-burgers/partager.jpg',
     badge: null,
-    needsReview: true,
   },
 
   /* ------------------------------- BOX ---------------------------- */
@@ -426,8 +424,6 @@ const MFC_PRODUCTS = [
 /* Coordonnées de commande — reprises du menu original (bouton "ORDER NOW"). */
 const MFC_ORDER_PHONE = '0528236023';
 
-/* NOTE — 2 valeurs de prix étaient partiellement masquées par l'interface
-   Instagram sur la capture fournie (barre de réponse superposée) :
-   "Croustillant" et "Le Partager" (colonne Seul/Menu). Elles sont affichées
-   comme "Prix à confirmer" plutôt que devinées. À corriger dans ce fichier
-   dès que les vrais montants sont connus. */
+/* NOTE — les prix "Croustillant" et "Le Partager" (partiellement masqués sur
+   une première capture) ont été confirmés via une capture du menu officiel
+   et sont maintenant renseignés ci-dessus. */

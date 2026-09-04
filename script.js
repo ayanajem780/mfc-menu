@@ -330,7 +330,15 @@
     } else {
       /* Only the products with clean, high-quality photos are shown here;
          the rest stay off this page until better photos are available. */
-      const photoGridIds = ['le-crunchy', 'mfc-wrap', 'le-crispy'];
+      const photoGridIds = [
+        'le-crunchy',
+        'mfc-wrap',
+        'le-crispy',
+        'rapide',
+        'le-chef',
+        'croustillant',
+        'le-partager',
+      ];
       const photoGridProducts = photoGridIds
         .map((id) => products.find((p) => p.id === id))
         .filter(Boolean);
