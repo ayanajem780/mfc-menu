@@ -83,6 +83,70 @@ button {
   color: var(--gold);
 }
 
+/* Twister & Burgers only: 3D spinning logo disc that replaces the
+   "MFC · 01" eyebrow. Pure CSS 3D (perspective + rotateY + backface-visibility),
+   slow infinite loop, premium/floating feel. */
+.logo3d-wrap {
+  perspective: 1000px;
+  width: clamp(64px, 8vw, 96px);
+  height: clamp(64px, 8vw, 96px);
+  margin: 0 auto 4px;
+  animation: logo3d-float 6s ease-in-out infinite;
+}
+
+.logo3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: logo3d-spin 10s linear infinite;
+}
+
+.logo3d__face {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #ffffff, #f3ede1 70%, #e7ddc9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  box-shadow:
+    0 14px 26px -8px rgba(30, 10, 8, 0.35),
+    inset 0 0 0 1px rgba(27, 21, 18, 0.08),
+    inset 0 -6px 14px rgba(27, 21, 18, 0.08);
+}
+
+.logo3d__face img {
+  width: 66%;
+  height: 66%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(27, 21, 18, 0.15));
+}
+
+.logo3d__face--back {
+  transform: rotateY(180deg);
+}
+
+@keyframes logo3d-spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+@keyframes logo3d-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 700px) {
+  .logo3d-wrap { width: clamp(52px, 16vw, 72px); height: clamp(52px, 16vw, 72px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo3d-wrap,
+  .logo3d { animation: none; }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);

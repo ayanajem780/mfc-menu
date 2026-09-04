@@ -201,7 +201,29 @@
     section.appendChild(el('div', 'category__glow'));
 
     const head = el('div', 'category__head reveal');
-    head.appendChild(el('p', 'eyebrow', 'MFC · ' + (cat.id === 'twister-burgers' ? '01' : cat.id === 'box' ? '02' : cat.id === 'big-box' ? '03' : '04')));
+    if (cat.id === 'twister-burgers') {
+      /* Twister & Burgers only: the "MFC · 01" eyebrow is replaced with a
+         slowly spinning 3D logo disc (pure CSS 3D, no library needed). */
+      const logo3dWrap = el('div', 'logo3d-wrap');
+      logo3dWrap.setAttribute('aria-hidden', 'true');
+      const logo3d = el('div', 'logo3d');
+      const front = el('div', 'logo3d__face logo3d__face--front');
+      const frontImg = el('img');
+      frontImg.src = 'images/logo/mfc-logo.png';
+      frontImg.alt = '';
+      front.appendChild(frontImg);
+      const back = el('div', 'logo3d__face logo3d__face--back');
+      const backImg = el('img');
+      backImg.src = 'images/logo/mfc-logo.png';
+      backImg.alt = '';
+      back.appendChild(backImg);
+      logo3d.appendChild(front);
+      logo3d.appendChild(back);
+      logo3dWrap.appendChild(logo3d);
+      head.appendChild(logo3dWrap);
+    } else {
+      head.appendChild(el('p', 'eyebrow', 'MFC · ' + (cat.id === 'box' ? '02' : cat.id === 'big-box' ? '03' : '04')));
+    }
     head.appendChild(el('h2', 'category__title', escapeHtml(cat.label)));
     head.appendChild(el('p', 'category__tagline', escapeHtml(cat.tagline)));
     section.appendChild(head);
