@@ -3,7 +3,7 @@
    Direction artistique : food branding premium, éditorial, minimal, sombre.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Baloo+2:wght@600;700;800&family=Jost:wght@300;400;500;600;700&display=swap');
 
 :root {
   --bg: #ffffff;
@@ -434,6 +434,56 @@ button {
 
 .category__title .accent {
   color: var(--red-bright);
+}
+
+/* Twister & Burgers only: fun rounded display font + a sauce-splash
+   graphic floating beside the title. */
+.category__title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.category__title--fun {
+  font-family: 'Baloo 2', var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0;
+  font-size: clamp(42px, 7.4vw, 88px);
+}
+
+.category__title-sauce {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: clamp(80px, 9vw, 130px);
+  height: auto;
+  transform: translate(-62%, -22%) rotate(-10deg);
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 12px 20px rgba(180, 110, 10, 0.32));
+  animation: sauce-wiggle 5s ease-in-out infinite;
+}
+
+@keyframes sauce-wiggle {
+  0%, 100% { transform: translate(-62%, -22%) rotate(-10deg); }
+  50% { transform: translate(-62%, -22%) rotate(-4deg) translateY(-6px); }
+}
+
+@media (max-width: 700px) {
+  .category__title-sauce {
+    width: clamp(56px, 20vw, 84px);
+    top: 100%;
+    left: auto;
+    right: -2%;
+    transform: translateY(-16%) rotate(-10deg);
+  }
+  @keyframes sauce-wiggle {
+    0%, 100% { transform: translateY(-16%) rotate(-10deg); }
+    50% { transform: translateY(-22%) rotate(-4deg); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category__title-sauce { animation: none; }
 }
 
 .category__tagline {

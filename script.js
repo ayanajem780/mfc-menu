@@ -224,7 +224,20 @@
     } else {
       head.appendChild(el('p', 'eyebrow', 'MFC · ' + (cat.id === 'box' ? '02' : cat.id === 'big-box' ? '03' : '04')));
     }
-    head.appendChild(el('h2', 'category__title', escapeHtml(cat.label)));
+    if (cat.id === 'twister-burgers') {
+      /* Twister & Burgers only: a fun, bold display font + a sauce-splash
+         graphic floating beside the title. */
+      const titleWrap = el('div', 'category__title-wrap');
+      titleWrap.appendChild(el('h2', 'category__title category__title--fun', escapeHtml(cat.label)));
+      const sauce = el('img', 'category__title-sauce');
+      sauce.src = 'images/deco/sauce-splash.png';
+      sauce.alt = '';
+      sauce.loading = 'lazy';
+      titleWrap.appendChild(sauce);
+      head.appendChild(titleWrap);
+    } else {
+      head.appendChild(el('h2', 'category__title', escapeHtml(cat.label)));
+    }
     head.appendChild(el('p', 'category__tagline', escapeHtml(cat.tagline)));
     section.appendChild(head);
 
