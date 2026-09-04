@@ -208,22 +208,59 @@
 
     const products = productsByCategory(cat.id);
 
-    const stage = el('div', 'category__stage reveal');
-    const stagePicks = products.slice(0, 4);
-    const slots = ['fi-a', 'fi-b', 'fi-c', 'fi-d'];
-    stagePicks.forEach((p, i) => {
-      const wrap = el('div', 'float-item ' + slots[i % slots.length]);
-      const img = el('img');
-      img.src = p.image;
-      img.alt = '';
-      img.loading = 'lazy';
-      wrap.appendChild(img);
-      stage.appendChild(wrap);
-    });
-    section.appendChild(stage);
+    const isTwisterBurgers = cat.id === 'twister-burgers';
+
+    if (isTwisterBurgers) {
+      /* Real product photos (red studio backdrop kept as-is, no cutout),
+         shown as 3 separated cards (image + name + description) instead of
+         an overlapping floating stage — leaves room to add a description
+         under each one (edit the "description" field on that product in
+         data.js and it will appear here automatically). */
+      const trioIds = ['cadeau', 'regime', 'complet'];
+      const trioGrid = el('div', 'trio-grid reveal');
+      trioIds.forEach((id) => {
+        const p = products.find((prod) => prod.id === id);
+        if (!p) return;
+        const card = el('div', 'trio-card');
+        const media = el('div', 'trio-card__media');
+        const img = el('img');
+        img.src = p.image;
+        img.alt = escapeHtml(p.name);
+        img.loading = 'lazy';
+        media.appendChild(img);
+        card.appendChild(media);
+        const body = el('div', 'trio-card__body');
+        body.appendChild(el('h3', 'trio-card__name', escapeHtml(p.name)));
+        if (p.description) {
+          body.appendChild(el('p', 'trio-card__desc', escapeHtml(p.description)));
+        }
+        card.appendChild(body);
+        trioGrid.appendChild(card);
+      });
+      section.appendChild(trioGrid);
+    } else {
+      const stage = el('div', 'category__stage reveal');
+      const stagePicks = products.slice(0, 4);
+      const slots = ['fi-a', 'fi-b', 'fi-c', 'fi-d'];
+      stagePicks.forEach((p, i) => {
+        const wrap = el('div', 'float-item ' + slots[i % slots.length]);
+        const img = el('img');
+        img.src = p.image;
+        img.alt = '';
+        img.loading = 'lazy';
+        wrap.appendChild(img);
+        stage.appendChild(wrap);
+      });
+      section.appendChild(stage);
+    }
+
+    const trioIds = ['cadeau', 'regime', 'complet'];
+    const gridProducts = isTwisterBurgers
+      ? products.filter((p) => !trioIds.includes(p.id))
+      : products;
 
     const grid = el('div', 'grid');
-    products.forEach((p) => grid.appendChild(buildCard(p)));
+    gridProducts.forEach((p) => grid.appendChild(buildCard(p)));
     section.appendChild(grid);
 
     return section;
