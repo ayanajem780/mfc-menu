@@ -196,6 +196,50 @@
     return card;
   }
 
+  /* ---------------------- photo + price card (Twister & Burgers) ---------------------- */
+
+  function buildTrioCard(p) {
+    const card = el('div', 'trio-card');
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', p.name);
+
+    const media = el('div', 'trio-card__media');
+    const img = el('img');
+    img.src = p.image;
+    img.alt = escapeHtml(p.name);
+    img.loading = 'lazy';
+    media.appendChild(img);
+    card.appendChild(media);
+
+    const body = el('div', 'trio-card__body');
+    body.appendChild(el('h3', 'trio-card__name', escapeHtml(p.name)));
+    if (p.description) {
+      body.appendChild(el('p', 'trio-card__desc', escapeHtml(p.description)));
+    }
+    if (p.options && p.options.length) {
+      const prices = el('div', 'trio-card__prices');
+      p.options.forEach((o) => {
+        const row = el('span', 'trio-card__price-row');
+        row.appendChild(el('span', 'trio-card__price-name', escapeHtml(o.name)));
+        row.appendChild(el('span', 'trio-card__price-val', o.price != null ? o.price + ' DH' : '—'));
+        prices.appendChild(row);
+      });
+      body.appendChild(prices);
+    }
+    card.appendChild(body);
+
+    card.addEventListener('click', () => openModal(p));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(p);
+      }
+    });
+
+    return card;
+  }
+
   /* --------------------------- category sections --------------------------- */
 
   function buildCategorySection(cat) {
@@ -260,31 +304,7 @@
       trioIds.forEach((id) => {
         const p = products.find((prod) => prod.id === id);
         if (!p) return;
-        const card = el('div', 'trio-card');
-        const media = el('div', 'trio-card__media');
-        const img = el('img');
-        img.src = p.image;
-        img.alt = escapeHtml(p.name);
-        img.loading = 'lazy';
-        media.appendChild(img);
-        card.appendChild(media);
-        const body = el('div', 'trio-card__body');
-        body.appendChild(el('h3', 'trio-card__name', escapeHtml(p.name)));
-        if (p.description) {
-          body.appendChild(el('p', 'trio-card__desc', escapeHtml(p.description)));
-        }
-        if (p.options && p.options.length) {
-          const prices = el('div', 'trio-card__prices');
-          p.options.forEach((o) => {
-            const row = el('span', 'trio-card__price-row');
-            row.appendChild(el('span', 'trio-card__price-name', escapeHtml(o.name)));
-            row.appendChild(el('span', 'trio-card__price-val', o.price != null ? o.price + ' DH' : '—'));
-            prices.appendChild(row);
-          });
-          body.appendChild(prices);
-        }
-        card.appendChild(body);
-        trioGrid.appendChild(card);
+        trioGrid.appendChild(buildTrioCard(p));
       });
       section.appendChild(trioGrid);
     } else {
@@ -315,8 +335,8 @@
         .map((id) => products.find((p) => p.id === id))
         .filter(Boolean);
       if (photoGridProducts.length) {
-        const grid = el('div', 'grid');
-        photoGridProducts.forEach((p) => grid.appendChild(buildCard(p)));
+        const grid = el('div', 'trio-grid reveal');
+        photoGridProducts.forEach((p) => grid.appendChild(buildTrioCard(p)));
         section.appendChild(grid);
       }
     }
