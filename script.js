@@ -151,7 +151,9 @@
     body.appendChild(el('h3', 'card__name', escapeHtml(product.name)));
 
     let metaText = '';
-    if (product.ingredients && product.ingredients.length) {
+    if (product.description) {
+      metaText = product.description;
+    } else if (product.ingredients && product.ingredients.length) {
       metaText = product.ingredients.join(' · ');
     } else if (product.options) {
       metaText = product.options

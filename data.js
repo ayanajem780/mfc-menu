@@ -58,7 +58,7 @@ const MFC_PRODUCTS = [
     id: 'regime',
     category: 'twister-burgers',
     name: 'Régime',
-    description: null,
+    description: 'Un nom qui trompe : chicken croustillant généreusement nappé de sauce fromage et sauce burger.',
     ingredients: null,
     price: 35,
     priceLabel: '35 DH',
