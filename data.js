@@ -254,6 +254,48 @@ const MFC_PRODUCTS = [
     badge: null,
   },
 
+  /* --------------------------- ACCOMPAGNEMENTS ---------------------------- */
+  /* NOUVEAU — ajouté à la demande d'Aya (17/09/2026). */
+  {
+    id: 'piece-chicken',
+    category: 'accompagnements',
+    name: 'Pièce de Chicken',
+    description: null,
+    ingredients: null,
+    price: 30,
+    priceLabel: '30 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/piece-chicken.jpg',
+    badge: null,
+  },
+  {
+    id: 'nuggets',
+    category: 'accompagnements',
+    name: 'Nuggets',
+    description: null,
+    ingredients: ['6 Pièces'],
+    price: 25,
+    priceLabel: '25 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/nuggets.jpg',
+    badge: null,
+  },
+  {
+    id: 'strips',
+    category: 'accompagnements',
+    name: 'Strips',
+    description: null,
+    ingredients: ['3 Pièces'],
+    price: 30,
+    priceLabel: '30 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/strips.jpg',
+    badge: null,
+  },
+
   /* -------------------------------- SODA --------------------------------- */
   /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026), regroupé en une seule
      fiche "Soda" le 15/09/2026 : une carte dans le menu, et au clic une
