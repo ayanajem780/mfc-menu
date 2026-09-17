@@ -37,6 +37,31 @@ const MFC_CATEGORIES = [
     tagline: 'Pour les grandes tablées et les grandes faims.',
   },
   {
+    /* NOUVEAU — ajouté à la demande d'Aya (17/09/2026). Tagline provisoire.
+       Catégorie créée sans produits pour l'instant : les photos existent déjà
+       dans images/menu/sides/ (nuggets, fried-cheese, strips, frites,
+       piece-chicken, corn, riz, tiramisu, croquettes, wings, mfc-mix, salade)
+       mais les prix n'ont pas été fournis, donc aucun produit n'est ajouté
+       ici pour éviter d'inventer des prix. */
+    id: 'accompagnements',
+    label: 'Accompagnements',
+    tagline: 'Le petit plus qui complète la commande.',
+  },
+  {
+    /* NOUVEAU — ajouté à la demande d'Aya (17/09/2026). Catégorie créée sans
+       produits pour l'instant : aucun produit/prix fourni. */
+    id: 'mfc-kids',
+    label: 'MFC Kids',
+    tagline: 'Pensé pour les plus petits.',
+  },
+  {
+    /* NOUVEAU — ajouté à la demande d'Aya (17/09/2026). Catégorie créée sans
+       produits pour l'instant : aucun produit/prix fourni. */
+    id: 'promotion-speciale',
+    label: 'Promotion Spéciale',
+    tagline: 'Les offres du moment.',
+  },
+  {
     /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026). Tagline provisoire,
        à modifier si besoin : ce n'est pas un texte tiré du menu original. */
     id: 'soda',
