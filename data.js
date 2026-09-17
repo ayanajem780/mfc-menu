@@ -261,7 +261,7 @@ const MFC_PRODUCTS = [
     category: 'accompagnements',
     name: 'Pièce de Chicken',
     description: null,
-    ingredients: null,
+    ingredients: ['1 Pièce'],
     price: 30,
     priceLabel: '30 DH',
     options: null,
