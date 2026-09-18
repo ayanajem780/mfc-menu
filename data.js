@@ -321,6 +321,25 @@ const MFC_PRODUCTS = [
       { id: 'soda-hawai', name: 'Hawaï Tropical', image: 'images/menu/soda/hawai-tropical.jpg', price: null, priceLabel: null },
     ],
   },
+  /* NOUVEAU — ajouté à la demande d'Aya (17/09/2026) : carte "Soda 1L"
+     séparée de la carte 25 cl. Photo provisoire (pack de sodas) en
+     attendant qu'Aya envoie la vraie photo de la bouteille 1L — à
+     remplacer dans images/menu/soda/ puis mettre à jour le champ image
+     ci-dessous. Prix encore à confirmer. */
+  {
+    id: 'soda-1l',
+    category: 'soda',
+    name: 'Soda 1L',
+    description: null,
+    ingredients: null,
+    price: null,
+    priceLabel: null,
+    options: null,
+    people: null,
+    image: 'images/menu/soda/soda-lineup.jpg',
+    badge: null,
+    needsReview: true,
+  },
 
   /* ------------------------- PIÑA COLADA SIGNATURE ------------------------ */
   /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026). 3 fiches, photos
