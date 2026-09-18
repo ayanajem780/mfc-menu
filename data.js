@@ -304,7 +304,7 @@ const MFC_PRODUCTS = [
     id: 'kids-1',
     category: 'mfc-kids',
     name: 'Menu Kids 1', // PROVISOIRE — nom à remplacer
-    description: 'Description à venir.', // PROVISOIRE — description à remplacer
+    description: "Un menu gourmand pour les petits : burger au chicken crispy, frites dorées, jus d'orange et une surprise offerte.",
     ingredients: null,
     price: 35,
     priceLabel: '35 DH',
@@ -317,7 +317,7 @@ const MFC_PRODUCTS = [
     id: 'kids-2',
     category: 'mfc-kids',
     name: 'Menu Kids 2', // PROVISOIRE — nom à remplacer
-    description: 'Description à venir.', // PROVISOIRE — description à remplacer
+    description: "Un menu croustillant pour les petits gourmands : nuggets de chicken, frites dorées, jus d'orange et une surprise offerte.",
     ingredients: null,
     price: 35,
     priceLabel: '35 DH',
