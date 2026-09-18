@@ -296,6 +296,37 @@ const MFC_PRODUCTS = [
     badge: null,
   },
 
+  /* -------------------------------- MFC KIDS ------------------------------ */
+  /* NOUVEAU — ajouté à la demande d'Aya (18/09/2026). Nom, description et
+     photo PROVISOIRES (placeholder) en attendant les vraies infos et photos
+     du menu Kids — à remplacer. Prix confirmé par Aya : 35 DH pour les deux. */
+  {
+    id: 'kids-1',
+    category: 'mfc-kids',
+    name: 'Menu Kids 1', // PROVISOIRE — nom à remplacer
+    description: 'Description à venir.', // PROVISOIRE — description à remplacer
+    ingredients: null,
+    price: 35,
+    priceLabel: '35 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/wings.jpg', // PROVISOIRE — photo temporaire à remplacer
+    badge: null,
+  },
+  {
+    id: 'kids-2',
+    category: 'mfc-kids',
+    name: 'Menu Kids 2', // PROVISOIRE — nom à remplacer
+    description: 'Description à venir.', // PROVISOIRE — description à remplacer
+    ingredients: null,
+    price: 35,
+    priceLabel: '35 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/croquettes.jpg', // PROVISOIRE — photo temporaire à remplacer
+    badge: null,
+  },
+
   /* -------------------------------- SODA --------------------------------- */
   /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026), regroupé en une seule
      fiche "Soda" le 15/09/2026 : une carte dans le menu, et au clic une
