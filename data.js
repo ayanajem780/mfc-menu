@@ -310,7 +310,7 @@ const MFC_PRODUCTS = [
     priceLabel: '35 DH',
     options: null,
     people: null,
-    image: 'images/menu/sides/wings.jpg', // PROVISOIRE — photo temporaire à remplacer
+    image: 'images/menu/mfc-kids/kids-1.jpg',
     badge: null,
   },
   {
@@ -323,7 +323,7 @@ const MFC_PRODUCTS = [
     priceLabel: '35 DH',
     options: null,
     people: null,
-    image: 'images/menu/sides/croquettes.jpg', // PROVISOIRE — photo temporaire à remplacer
+    image: 'images/menu/mfc-kids/kids-2.jpg',
     badge: null,
   },
 
