@@ -443,51 +443,47 @@ const MFC_PRODUCTS = [
   },
 
   /* ------------------------- PIÑA COLADA SIGNATURE ------------------------ */
-  /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026). 3 fiches, photos
-     envoyées par Aya le 15/09/2026. Noms et prix encore provisoires : à
-     remplacer dès qu'elle envoie les infos exactes (needsReview -> pastille
-     "Prix à confirmer"). */
+  /* Photos envoyées par Aya le 15/09/2026. Prix confirmés par Aya le
+     18/09/2026 : Fraise 35 DH, Tropical 35 DH, Virgin 30 DH. Descriptions
+     écrites par Claude (texte marketing, pas issu du menu original). */
   {
     id: 'pina-colada-signature-1',
     category: 'pina-colada-signature',
     name: 'Piña Colada Fraise',
-    description: null,
+    description: 'Un mocktail glacé et fruité aux éclats de fraise, pour une pause fraîcheur pleine de gourmandise.',
     ingredients: null,
-    price: null,
-    priceLabel: null,
+    price: 35,
+    priceLabel: '35 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-1.jpg',
     badge: null,
-    needsReview: true,
   },
   {
     id: 'pina-colada-signature-2',
     category: 'pina-colada-signature',
     name: 'Piña Colada Tropical',
-    description: null,
+    description: 'Un mocktail exotique aux saveurs tropicales, frais et vitaminé, parfait pour accompagner votre commande.',
     ingredients: null,
-    price: null,
-    priceLabel: null,
+    price: 35,
+    priceLabel: '35 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-2.jpg',
     badge: null,
-    needsReview: true,
   },
   {
     id: 'pina-colada-signature-3',
     category: 'pina-colada-signature',
     name: 'Piña Colada Virgin',
-    description: null,
+    description: 'La piña colada classique sans alcool : ananas et coco, fraîche et onctueuse.',
     ingredients: null,
-    price: null,
-    priceLabel: null,
+    price: 30,
+    priceLabel: '30 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-3.jpg',
     badge: null,
-    needsReview: true,
   },
 ];
 
