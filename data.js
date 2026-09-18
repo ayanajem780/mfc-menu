@@ -379,6 +379,24 @@ const MFC_PRODUCTS = [
     badge: null,
   },
 
+  /* -------------------------------- PROMOTION SPECIALE -------------------- */
+  /* NOUVEAU — ajoutee a la demande d'Aya (18/09/2026). Offre : piña colada
+     offerte en fin de menu, a consommer sur place. Pas de supplement de prix
+     (priceLabel = "Offert sur place"). */
+  {
+    id: 'menu-pina-colada-offerte',
+    category: 'promotion-speciale',
+    name: 'Menu + Piña Colada Offerte',
+    description: "Sur place uniquement : terminez votre menu en beauté avec une Piña Colada Signature offerte, au choix parmi nos saveurs.",
+    ingredients: null,
+    price: null,
+    priceLabel: 'Offert sur place',
+    options: null,
+    people: null,
+    image: 'images/menu/promotion-speciale/menu-pina-colada-offerte.jpg',
+    badge: null,
+  },
+
   /* -------------------------------- SODA --------------------------------- */
   /* NOUVEAU — ajouté à la demande d'Aya (15/09/2026), regroupé en une seule
      fiche "Soda" le 15/09/2026 : une carte dans le menu, et au clic une
