@@ -237,7 +237,7 @@ const MFC_PRODUCTS = [
     priceLabel: '150 DH',
     options: null,
     people: '2 Personnes et +',
-    image: 'images/menu/big-box/duo.jpg',
+    image: 'images/menu/big-box/duo-150.jpg',
     badge: null,
   },
   {
