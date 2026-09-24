@@ -426,6 +426,7 @@ const MFC_PRODUCTS = [
     options: null,
     people: null,
     image: 'images/menu/soda/soda-25cl-lineup.jpg',
+    modalImage: 'images/menu/soda/soda-25cl-modal.jpg', // photo affichée au clic (4 bouteilles visibles)
     badge: null,
     variants: [
       { id: 'soda-coca', name: 'Coca-Cola', image: 'images/menu/soda/coca-cola-25cl.jpg', price: 8, priceLabel: '8 DH' },
