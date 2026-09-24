@@ -446,13 +446,18 @@ const MFC_PRODUCTS = [
     name: 'Soda 1L',
     description: null,
     ingredients: null,
-    price: null,
-    priceLabel: null,
+    price: 15,
+    priceLabel: '15 DH',
     options: null,
     people: null,
-    image: 'images/menu/soda/soda-lineup.jpg',
+    image: 'images/menu/soda/soda-1l-lineup.jpg',
     badge: null,
-    needsReview: true,
+    variants: [
+      { id: 'soda-1l-coca', name: 'Coca-Cola 1L', image: 'images/menu/soda/coca-cola-1l.jpg', price: 15, priceLabel: '15 DH' },
+      { id: 'soda-1l-fanta', name: 'Fanta 1L', image: 'images/menu/soda/fanta-1l.jpg', price: 15, priceLabel: '15 DH' },
+      { id: 'soda-1l-sprite', name: 'Sprite 1L', image: 'images/menu/soda/sprite-1l.jpg', price: 15, priceLabel: '15 DH' },
+      { id: 'soda-1l-hawai', name: 'Hawaï 1L', image: 'images/menu/soda/hawai-1l.jpg', price: 15, priceLabel: '15 DH' },
+    ],
   },
 
   /* ------------------------- PIÑA COLADA SIGNATURE ------------------------ */
