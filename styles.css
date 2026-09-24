@@ -1206,3 +1206,10 @@ button {
   .hero { min-height: 100vh; padding-bottom: 70px; }
   .modal { max-height: 96vh; }
 }
+
+/* Photo de groupe au clic (ex. Soda 1L) : affichée en entier, sans rognage,
+   pour garder les 4 bouteilles visibles. Fond rouge assorti à la photo. */
+.modal__media img.is-contain {
+  object-fit: contain;
+  background: linear-gradient(180deg, #c10203 0%, #c10203 50%, #e4261c 100%);
+}

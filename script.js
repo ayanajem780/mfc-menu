@@ -360,6 +360,7 @@
 
       const showVariant = (variant) => {
         if (variant) {
+          modalImg.classList.remove('is-contain');
           modalImg.src = variant.image;
           modalImg.alt = variant.name;
           modalTitle.textContent = variant.name;
@@ -368,7 +369,8 @@
           /* Aucune boisson sélectionnée : on affiche la vitrine du groupe
              (photo + nom du produit parent, ex. "Soda") tant que l'utilisateur
              n'a pas cliqué sur une boisson précise. */
-          modalImg.src = product.image;
+          modalImg.src = product.modalImage || product.image;
+          modalImg.classList.toggle('is-contain', !!product.modalImage);
           modalImg.alt = product.name;
           modalTitle.textContent = product.name;
           modalPrice.textContent = priceLabelFor(product) !== '—' ? priceLabelFor(product) : 'Prix à confirmer';
@@ -398,6 +400,7 @@
     } else {
       modalVariants.style.display = 'none';
 
+      modalImg.classList.remove('is-contain');
       modalImg.src = product.image;
       modalImg.alt = product.name;
       modalTitle.textContent = product.name;

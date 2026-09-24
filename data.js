@@ -450,6 +450,7 @@ const MFC_PRODUCTS = [
     options: null,
     people: null,
     image: 'images/menu/soda/soda-1l-lineup-v2.jpg',
+    modalImage: 'images/menu/soda/soda-1l-modal.jpg', // photo carrée affichée au clic (4 bouteilles visibles)
     badge: null,
     variants: [
       { id: 'soda-1l-coca', name: 'Coca-Cola 1L', image: 'images/menu/soda/coca-cola-1l-v2.jpg', price: 15, priceLabel: '15 DH' },
