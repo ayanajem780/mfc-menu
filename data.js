@@ -347,6 +347,19 @@ const MFC_PRODUCTS = [
     image: 'images/menu/sides/wings.jpg',
     badge: null,
   },
+  {
+    id: 'riz-crispy',
+    category: 'accompagnements',
+    name: 'Riz',
+    description: 'Un riz nature moelleux, garni de morceaux de poulet crispy coupés en petites bouchées — simple, généreux et croustillant.',
+    ingredients: null,
+    price: 20,
+    priceLabel: '20 DH',
+    options: null,
+    people: null,
+    image: 'images/menu/sides/riz-crispy.jpg',
+    badge: 'Nouveau',
+  },
 
   /* -------------------------------- MFC KIDS ------------------------------ */
   /* NOUVEAU — ajouté à la demande d'Aya (18/09/2026). Nom, description et
