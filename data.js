@@ -340,8 +340,8 @@ const MFC_PRODUCTS = [
     name: 'Wings',
     description: null,
     ingredients: ['6 Pièces'],
-    price: null, // A COMPLETER — prix non fourni pour les Wings
-    priceLabel: null, // A COMPLETER
+    price: 30,
+    priceLabel: '30 DH',
     options: null,
     people: null,
     image: 'images/menu/sides/wings.jpg',
@@ -358,7 +358,7 @@ const MFC_PRODUCTS = [
     options: null,
     people: null,
     image: 'images/menu/sides/riz-crispy.jpg',
-    badge: 'Nouveau',
+    badge: null,
   },
 
   /* -------------------------------- MFC KIDS ------------------------------ */
@@ -465,12 +465,12 @@ const MFC_PRODUCTS = [
     name: 'Piña Colada Fraise',
     description: 'Un mocktail glacé et fruité aux éclats de fraise, pour une pause fraîcheur pleine de gourmandise.',
     ingredients: null,
-    price: 35,
-    priceLabel: '35 DH',
+    price: 25,
+    priceLabel: '25 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-1.jpg',
-    badge: null,
+    badge: 'Nouveau',
   },
   {
     id: 'pina-colada-signature-2',
@@ -478,12 +478,12 @@ const MFC_PRODUCTS = [
     name: 'Piña Colada Tropical',
     description: 'Un mocktail exotique aux saveurs tropicales, frais et vitaminé, parfait pour accompagner votre commande.',
     ingredients: null,
-    price: 35,
-    priceLabel: '35 DH',
+    price: 25,
+    priceLabel: '25 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-2.jpg',
-    badge: null,
+    badge: 'Nouveau',
   },
   {
     id: 'pina-colada-signature-3',
@@ -491,12 +491,12 @@ const MFC_PRODUCTS = [
     name: 'Piña Colada Virgin',
     description: 'La piña colada classique sans alcool : ananas et coco, fraîche et onctueuse.',
     ingredients: null,
-    price: 30,
-    priceLabel: '30 DH',
+    price: 20,
+    priceLabel: '20 DH',
     options: null,
     people: null,
     image: 'images/menu/pina-colada-signature/pina-colada-signature-3.jpg',
-    badge: null,
+    badge: 'Nouveau',
   },
 ];
 
