@@ -175,6 +175,22 @@ const MFC_PRODUCTS = [
     image: 'images/menu/twister-burgers/wrap.jpg',
     badge: null,
   },
+  {
+    id: 'mfc-mix',
+    category: 'twister-burgers',
+    name: 'MFC Mix',
+    description: 'Une barquette de frites dorées généreusement garnie de chicken crispy et de jambon, nappée de sauce fromage et sauce burger.',
+    ingredients: null,
+    price: 30,
+    priceLabel: '30 DH',
+    options: [
+      { name: 'Seul', price: 30 },
+      { name: 'Menu', price: 45 },
+    ],
+    people: null,
+    image: 'images/menu/twister-burgers/mfc-mix.jpg',
+    badge: null,
+  },
 
   /* ------------------------------- BOX ---------------------------- */
   {
