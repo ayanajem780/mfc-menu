@@ -261,10 +261,9 @@
     section.appendChild(el('div', 'category__glow'));
 
     const head = el('div', 'category__head reveal');
-    if (cat.id === 'twister-burgers' || cat.id === 'box' || cat.id === 'big-box') {
-      /* Twister & Burgers, Box and Big Box: the "MFC · 0X" eyebrow is
-         replaced with a slowly spinning 3D logo disc (pure CSS 3D, no
-         library needed). */
+    {
+      /* Toutes les catégories : logo MFC 3D qui tourne au-dessus du titre
+         (étendu à toutes les sections à la demande d'Aya, 25/09/2026). */
       const logo3dWrap = el('div', 'logo3d-wrap');
       logo3dWrap.setAttribute('aria-hidden', 'true');
       const logo3d = el('div', 'logo3d');
@@ -282,9 +281,6 @@
       logo3d.appendChild(back);
       logo3dWrap.appendChild(logo3d);
       head.appendChild(logo3dWrap);
-    } else {
-      const catIndex = MFC_CATEGORIES.findIndex((c) => c.id === cat.id) + 1;
-      head.appendChild(el('p', 'eyebrow', 'MFC · ' + String(catIndex).padStart(2, '0')));
     }
     if (cat.id === 'twister-burgers' || cat.id === 'box' || cat.id === 'big-box') {
       /* Twister & Burgers, Box and Big Box: a fun, bold display font + a
