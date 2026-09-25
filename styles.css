@@ -1213,3 +1213,13 @@ button {
   object-fit: contain;
   background: linear-gradient(180deg, #c10203 0%, #c10203 50%, #e4261c 100%);
 }
+
+/* Petites cases des boissons : bouteille entière visible (bouchon compris),
+   sans rognage. Fond rouge assorti aux photos. */
+.modal__variant__media {
+  aspect-ratio: 3/4;
+  background: #bb0206;
+}
+.modal__variant__media img {
+  object-fit: contain;
+}
