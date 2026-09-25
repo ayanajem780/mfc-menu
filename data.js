@@ -230,7 +230,7 @@ const MFC_PRODUCTS = [
     id: 'le-partager',
     category: 'box',
     name: 'Le Partager',
-    description: 'Deux cuisses et deux filets de poulet croustillant sur riz safrané, avec du pain — un assortiment généreux fait pour être partagé.',
+    description: 'Quatre pilons de poulet croustillant sur riz safrané, avec du pain — une box généreuse faite pour être partagée.',
     ingredients: null,
     price: 60,
     priceLabel: '60 DH',
@@ -239,7 +239,7 @@ const MFC_PRODUCTS = [
       { name: 'Menu', price: 70 },
     ],
     people: null,
-    image: 'images/menu/twister-burgers/partager.jpg',
+    image: 'images/menu/twister-burgers/partager-pilons.jpg',
     badge: null,
   },
 
