@@ -1223,3 +1223,25 @@ button {
 .modal__variant__media img {
   object-fit: contain;
 }
+
+/* CTA : vidéo "ON / Active mode" à la place de la photo (25/09/2026).
+   Fond rouge identique à celui de la vidéo ; bords de la vidéo fondus
+   pour qu'elle se confonde avec la section. Texte en dessous. */
+.cta {
+  background: #a6000a;
+  background-image: none;
+  padding: clamp(40px, 6vw, 80px) 0 clamp(60px, 8vw, 110px);
+}
+.cta__video {
+  display: block;
+  width: min(460px, 86vw);
+  height: auto;
+  margin: 0 auto calc(min(460px, 86vw) * -0.17);
+  position: relative;
+  z-index: 1;
+  -webkit-mask-image: radial-gradient(ellipse 72% 68% at 50% 50%, #000 60%, transparent 100%);
+          mask-image: radial-gradient(ellipse 72% 68% at 50% 50%, #000 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.cta .cta__title { text-shadow: 0 3px 14px rgba(60, 0, 4, 0.35); }
