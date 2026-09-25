@@ -400,7 +400,7 @@
     } else {
       modalVariants.style.display = 'none';
 
-      modalImg.classList.remove('is-contain');
+      modalImg.classList.toggle('is-contain', !!product.modalContain);
       modalImg.src = product.image;
       modalImg.alt = product.name;
       modalTitle.textContent = product.name;
