@@ -291,11 +291,7 @@
          sauce-splash graphic floating beside the title. */
       const titleWrap = el('div', 'category__title-wrap');
       titleWrap.appendChild(el('h2', 'category__title category__title--fun', escapeHtml(cat.label)));
-      const sauce = el('img', 'category__title-sauce' + (cat.id === 'box' || cat.id === 'big-box' ? ' category__title-sauce--side' : ''));
-      sauce.src = 'images/deco/sauce-splash.png';
-      sauce.alt = '';
-      sauce.loading = 'lazy';
-      titleWrap.appendChild(sauce);
+      /* Éclaboussure de sauce retirée à la demande d'Aya (25/09/2026). */
       head.appendChild(titleWrap);
     } else {
       head.appendChild(el('h2', 'category__title', escapeHtml(cat.label)));
