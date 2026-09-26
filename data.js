@@ -140,7 +140,7 @@ const MFC_PRODUCTS = [
       { name: 'Menu', price: 45 },
     ],
     people: null,
-    image: 'images/menu/twister-burgers/crispy.jpg',
+    image: 'images/menu/twister-burgers/crispy-v2.jpg',
     badge: null,
   },
   {
